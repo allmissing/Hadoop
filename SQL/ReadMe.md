@@ -1,10 +1,11 @@
 # 数据库
 
-## 学习资源
-MySQL视频教程https://www.bilibili.com/video/av47702905/?p=7
-
-## 视频学习第一步（https://www.bilibili.com/video/av28091888?from=search&seid=10808482176188664681）  
+## SQL语句快速学习
 1.SQL练习网站：https://sqlbolt.com  
-2.SQL手册：http://xuesql.cn/  
+2.对应中文网站：http://xuesql.cn/  
 3.在线数据库：http://www.sqlfiddle.com/#!9/99010e  
+4.菜鸟查询手册：https://www.runoob.com/sql/sql-tutorial.html  
+
+## MySQL学习资源
+MySQL视频教程https://www.bilibili.com/video/av47702905/?p=7
 
