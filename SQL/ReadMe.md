@@ -32,6 +32,6 @@ eg:
 ## MySql8.0安装
 参考https://www.cnblogs.com/luoli-/p/9249769.html
 
-## MySQL学习资源
-MySQL视频教程https://www.bilibili.com/video/av47702905/?p=7
-
+## Mysql注意事项
+1. 表名、列名等表示字符串的不是用引号括起来的，是用ESC键下面的那个键。  
+2. Workbunch中运行脚本后刷新才能看到结果。  
