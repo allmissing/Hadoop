@@ -77,14 +77,14 @@ https://www.jianshu.com/p/77597eadd3cc
 
 1. 上面链接中面试题1答案：
 
-      -- 第一步：按uid分组打上编号，提取时间中的日子，连续是这两个值的差是不变的，出现断点，就会变成另外一个值
-      with `tabs` as (
-      SELECT *,(Day(loadtime) - ROW_NUMBER() over (
-      partition by uid Order by uid,loadtime)) as Grop_No FROM MYDB.MYTAB
-      )
-      -- 第二步：把差值和id共同分组计算行数作为新的列，再返回来对id分组，找这个新的列中的最大值就是最大连续登陆天数了
-      select uid,max(cnt) as cnt2 from (
-      select uid,Grop_No,count(*) as cnt from `tabs` 
-      Group by uid,Grop_No
-      ) b
-      group by uid;
+      -- 第一步：按uid分组打上编号，提取时间中的日子，连续是这两个值的差是不变的，出现断点，就会变成另外一个值  
+      with `tabs` as (  
+      SELECT *,(Day(loadtime) - ROW_NUMBER() over (  
+      partition by uid Order by uid,loadtime)) as Grop_No FROM MYDB.MYTAB  
+      )  
+      -- 第二步：把差值和id共同分组计算行数作为新的列，再返回来对id分组，找这个新的列中的最大值就是最大连续登陆天数了  
+      select uid,max(cnt) as cnt2 from (  
+      select uid,Grop_No,count(*) as cnt from `tabs`   
+      Group by uid,Grop_No  
+      ) b  
+      group by uid;  
