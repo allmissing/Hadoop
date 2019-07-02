@@ -12,7 +12,7 @@ DCL(Data Control Language):Control flow statement,GRANT,Store Procedures,functio
 3. 菜鸟查询手册：https://www.runoob.com/sql/sql-tutorial.html  
 
 ### SQL8.0新增窗口函数语法（面试题会涉及）
-1. Over的用法: select 度量 Over 维度/窗口 as 度量名 From 表名  
+##### 1. Over的用法: select 度量 Over 维度/窗口 as 度量名 From 表名  
 参考：https://www.bilibili.com/video/av30579111?from=search&seid=7719848635273543563
 
 窗口可以用两种方式来书写：  
@@ -31,12 +31,12 @@ eg:
 注意点：
    （1）Over后窗口函数内的partition by(分组)、order by(排序)的执行要晚于外部的where、group by、order by的执行
 
-2. Row_number() Over()
+##### 2. Row_number() Over()
 参考：https://blog.csdn.net/qq_25221835/article/details/82762416  
 
-理解：row_number()是给数据行递增编号的函数，其常用搭配主要有以下几种
-     （1）row_number() over(order by 排序列 desc) 先按某列排序然后按行递增编号
-     （2）row_number() over(partition by 分组列 order by 排序列 desc) 先按某些列对数据进行分组，每组内排序递增编号
+理解：row_number()是给数据行递增编号的函数，其常用搭配主要有以下几种  
+     （1）row_number() over(order by 排序列 desc) 先按某列排序然后按行递增编号  
+     （2）row_number() over(partition by 分组列 order by 排序列 desc) 先按某些列对数据进行分组，每组内排序递增编号  
      （3）select row_number() over(partion by 分组列 order by 排序列 desc) as 新列名字 from 表名 where 
      
 
