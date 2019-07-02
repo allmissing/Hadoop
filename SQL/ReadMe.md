@@ -31,7 +31,7 @@ eg:
 注意点：
    （1）Over后窗口函数内的partition by(分组)、order by(排序)的执行要晚于外部的where、group by、order by的执行
 
-##### 2.非递归CTE
+##### 2.非递归CTE（公用表达式）
 
       with 临时表名 as （
          构造临时表（用select语句）
