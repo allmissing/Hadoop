@@ -34,4 +34,7 @@ eg:
 
 ## Mysql注意事项
 1. 表名、列名等表示字符串的不是用引号括起来的，是用ESC键下面的那个键。  
-2. Workbunch中运行脚本后刷新才能看到结果。  
+2. Workbunch中运行脚本后刷新才能看到结果。 
+
+## 面试题
+https://www.jianshu.com/p/77597eadd3cc
