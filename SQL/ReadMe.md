@@ -31,14 +31,29 @@ eg:
 注意点：
    （1）Over后窗口函数内的partition by(分组)、order by(排序)的执行要晚于外部的where、group by、order by的执行
 
-##### 2. Row_number() Over()
+##### 2.非递归CTE
+
+      with 临时表名 as （
+         构造临时表（用select语句）
+      ）
+
+##### 3. Row_number() Over()
 参考：https://blog.csdn.net/qq_25221835/article/details/82762416  
 
 理解：row_number()是给数据行递增编号的函数，其常用搭配主要有以下几种  
      （1）row_number() over(order by 排序列 desc) 先按某列排序然后按行递增编号  
      （2）row_number() over(partition by 分组列 order by 排序列 desc) 先按某些列对数据进行分组，每组内排序递增编号  
-     （3）select row_number() over(partion by 分组列 order by 排序列 desc) as 新列名字 from 表名 where 
+     （3）筛选每个分组的第一条记录，以递归调用方式为例如下，也可以采用非递归CTE  
      
+           select * from （
+               select row_number() over(partion by 分组列 order by 排序列 desc) as 新列名字 from 表名
+           ） 临时表名
+           where 新列名字=1;
+     
+##### 学习资料
+博客：https://www.cnblogs.com/wy123/archive/2018/03/14/8570011.html  
+书籍：MySQL 8 Cookbook（中文版）  
+
 
 # MySQL
 ### MySql8.0安装
