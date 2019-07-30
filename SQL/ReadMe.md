@@ -72,6 +72,11 @@ eg:
       #注释内容  
       /\*注释内容\*/  
 
+# 数据库基础知识
+
+### 索引的原理及使用
+https://blog.csdn.net/weixin_42181824/article/details/82261988
+
 ## 面试题
 https://www.jianshu.com/p/77597eadd3cc
 
