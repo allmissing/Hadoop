@@ -77,6 +77,9 @@ eg:
 ### 索引的原理及使用
 https://blog.csdn.net/weixin_42181824/article/details/82261988
 
+### 关系型数据库与非关系型数据库的区别
+https://blog.csdn.net/aaronthon/article/details/81714528
+
 ## 面试题
 https://www.jianshu.com/p/77597eadd3cc
 
